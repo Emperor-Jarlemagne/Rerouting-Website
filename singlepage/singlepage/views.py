@@ -1,15 +1,36 @@
-from django.http import Http404, HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from .forms import ContactForm
+from django.core.mail import send_mail, BadHeaderError
 
 #create views here
+
 def index(request):
-    return render(request, "singlepage/templates/index.html")
+    return render(request, "index.html")
 
-texts = ["Today is a grand day for our insect overlords, may the meek truly inherit what is left of this pitiful place. Goodbye inheritance, may this orb go softly into the glactic night.",
-            "Text 2", "Door # 3"]
+def home(request):
+    return render(request, "index.html", home)
 
-def section(request, num):
-    if 1 <= num <= 3:
-        return HttpResponse(texts[num - 1])
-    else:
-        raise Http404("No Such Section")
+def episodes(request):
+    return render(request, "index.html", episodes)
+
+def bios(request):
+   return render(request, "index.html", bios)
+
+def contact(request):
+    return render(request, "index.html", contact)
+
+def form(request):
+	submitted = False
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			cd = form.cleaned_data
+			form.save()
+			return redirect ("/contact?submitted=True")
+	else:
+		form = ContactForm()
+		if submitted in request.GET:
+			submitted = True
+   
+	return render(request, "index.html", {'form':form, "submitted": submitted})

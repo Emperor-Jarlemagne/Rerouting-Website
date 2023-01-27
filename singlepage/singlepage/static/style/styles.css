@@ -1,0 +1,173 @@
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(ellipse at bottom, #c80018 58%, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+main {
+  padding-bottom: 2.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+p {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+#table {
+  text-align: center;
+  align-content: center;
+  margin-top: -50px;
+  padding: 30px;
+  color: white;
+}
+th {
+  text-align: center;
+  color: white;
+
+}
+.texthenry {
+  text-align: right;
+  color: white;
+}
+
+.textjari {
+  text-align: left;
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+} 
+
+button, button::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px 10px;
+  position: relative;
+  text-transform: uppercase;
+  justify-content: left;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+button::before, button::after {
+  background: #fff;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: black;
+}
+
+.nappi {
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  background: none;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.nappi::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+.nappi:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.nappi:hover {
+  color: black;
+}
+
+.icons {
+  display: inline-block;
+}
+
+.footer {
+  background-color: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: auto;
+  left: 5px;
+  bottom: 10px;
+  width: 100%;
+  height: 25px;
+  text-decoration: none;
+}
+
