@@ -171,3 +171,19 @@ button:hover {
   text-decoration: none;
 }
 
+#pg2image {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+#pg3image {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+#pg4image {
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
+}
+
+#home {
+  display: block;
+}
