@@ -29,7 +29,6 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
     "https://rerouting.tech",
-    "github.com",
     "Emperor-Jarlemegne.github.io",
     
     ]
