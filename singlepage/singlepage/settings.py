@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'singlepage',
     'crispy_forms',
     'sslserver',
-    'django_medusa',
 ]
 
 SECURE_SSL_REDIRECT = True
@@ -64,6 +63,7 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,15 +144,13 @@ STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-MEDUSA_DEPLOY_DIR = os.path.join(
-    PROJECT_DIR, '..', "_output"
-)
