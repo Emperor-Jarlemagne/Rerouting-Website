@@ -1,2 +1,2 @@
 
-web:gunicorn singlepage.wsgi
+web: gunicorn rerouting-website.wsgi
