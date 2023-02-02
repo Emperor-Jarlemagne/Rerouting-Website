@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = [
     "https://rerouting.tech",
-    "Emperor-Jarlemegne.github.io",
+    "emperor-jarlemegne.github.io",
     
     ]
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'singlepage',
     'crispy_forms',
     'sslserver',
+    'django_medusa',
 ]
 
 SECURE_SSL_REDIRECT = True
@@ -149,3 +150,9 @@ STATICFILES_DIR = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+MEDUSA_DEPLOY_DIR = os.path.join(
+    PROJECT_DIR, '..', "_output"
+)
