@@ -6,19 +6,19 @@ from django.core.mail import send_mail, BadHeaderError
 #create views here
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "singlepage/index.html")
 
 def home(request):
-    return render(request, "index.html", home)
+    return render(request, "singlepage/index.html", home)
 
 def episodes(request):
-    return render(request, "index.html", episodes)
+    return render(request, "singlepage/index.html", episodes)
 
 def bios(request):
-   return render(request, "index.html", bios)
+   return render(request, "singlepage/index.html", bios)
 
 def contact(request):
-    return render(request, "index.html", contact)
+    return render(request, "singlepage/index.html", contact)
 
 def form(request):
 	submitted = False
