@@ -34,7 +34,6 @@ ALLOWED_HOSTS = [
     "https://rerouting-website.herokuapp.com/",
     ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
