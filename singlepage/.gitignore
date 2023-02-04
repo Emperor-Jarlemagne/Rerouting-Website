@@ -3,7 +3,9 @@
 *.pyc  
 *~  
 __pycache__  
-.venv  
+env  
 db.sqlite3  
 /static  
-.DS_Store  
+.DS_Store
+staticfiles
+activate
