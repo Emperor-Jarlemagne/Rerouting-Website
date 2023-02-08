@@ -26,7 +26,6 @@ def form(request):
 		form = ContactForm(request.POST)
 		if form.is_valid():
 			cd = form.cleaned_data
-			form.save()
 			return redirect ("/contact?submitted=True")
 	else:
 		form = ContactForm()
