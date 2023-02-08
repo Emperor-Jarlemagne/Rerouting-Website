@@ -15,6 +15,7 @@ main {
 
 h1 {
   text-align: center;
+  margin-top: 20px;
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -82,7 +83,12 @@ th {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-} 
+}
+
+.footer {
+  margin-bottom: 20px;
+  text-align: center
+}
 
 button, button::after {
   -webkit-transition: all 0.3s;
@@ -171,19 +177,77 @@ button:hover {
   text-decoration: none;
 }
 
+#pg1image {
+  margin-top: 50px;
+}
+
 #pg2image {
+  margin-top: 50px;
   filter: blur(5px);
   -webkit-filter: blur(5px);
 }
 #pg3image {
+  margin-top: 50px;
   filter: blur(10px);
   -webkit-filter: blur(10px);
 }
 #pg4image {
+  margin-top: 50px;
+  margin-bottom: 25px;
   filter: blur(25px);
   -webkit-filter: blur(25px);
 }
 
 #home {
   display: block;
+}
+
+@media (max-width: 900px) {
+  body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: no-repeat center center fixed;
+    background-image: radial-gradient(ellipse at bottom, #c80018 58%, black);
+    background-repeat: no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+  }
+  img {
+    display: block;
+    height: auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
+  .footer {
+    margin-top: auto;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .texthenry {
+    margin-left: 5%;
+    text-align: right;
+    color: white;
+  }
+  
+  .textjari {
+    margin-right: 5%;
+    text-align: left;
+    color: white;
+  }
+
 }
