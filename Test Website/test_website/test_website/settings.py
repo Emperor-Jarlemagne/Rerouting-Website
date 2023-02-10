@@ -27,28 +27,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG', default=False)
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.0",
     "127.0.0.1",
     "localhost",
     "rerouting-podcast.fly.dev",
-    "rerouting-website-db",
-    "rerouting-website-db.internal",
-    "rerouting.tech"
 ]
 
+#HTTPS settings
 SECURE_SSL_REDIRECT = True
-
 SESSION_COOKIE_SECURE = True
-
 CSRF_COOKIE_SECURE = True
 
+#HSTS settings
 SECURE_HSTS_SECONDS = 518400
-
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
 SECURE_HSTS_PRELOAD = True
 
 CSRF_TRUSTED_ORIGINS = ["https://rerouting-podcast.fly.dev", "https://rerouting.tech"]
