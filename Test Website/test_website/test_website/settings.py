@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 from environs import Env
 
 env = Env()
@@ -37,9 +36,22 @@ ALLOWED_HOSTS = [
     "rerouting-podcast.fly.dev",
     "rerouting-website-db",
     "rerouting-website-db.internal",
+    "rerouting.tech"
 ]
 
-CSRF_TRUSTED_ORIGINS = ["https://rerouting-podcast.fly.dev"]
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+SECURE_HSTS_SECONDS = 518400
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_HSTS_PRELOAD = True
+
+CSRF_TRUSTED_ORIGINS = ["https://rerouting-podcast.fly.dev", "https://rerouting.tech"]
 
 
 # Application definition

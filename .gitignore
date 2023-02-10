@@ -10,3 +10,5 @@ singlepage
 .dockerignore
 fly.toml
 requirements.txt
+settings.py
+staticfiles
